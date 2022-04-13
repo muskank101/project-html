@@ -1,0 +1,407 @@
+
+<div style="background-color:rgb(233, 175, 233)"><h2   style="background-color:rgb(221, 92, 52); text-align:center"> My Feedback Form</h2>
+	<table>
+		<tr style="background-color:blue;"><th style="padding:10px 0 10px">FEEDBACK</th>
+		<th style="background-color:blue">COMMENT</th></tr>
+		<tr>
+			<td>
+
+				<form name="myform" onsubmit="return validateform()" >
+					<div class="row">
+							<div class="col-25">
+								<label>Title</label>
+							</div>
+							<div class="col-75">
+								<select name="title">
+									<option value="">Select</option>
+									<option value="Mr.">Mr.</option>
+									<option value="Mrs.">Mrs.</option>
+								</select>
+								<span id="title" style="color:red"></span>
+							</div>
+							
+						</div>
+						<span id="title"></span>	
+						<div class="row">
+							<div class="col-25">
+								<label for="fname">First Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" name="firstname" placeholder="Your name.."autocomplete="off"
+								onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"  maxlength="30">
+								<span id="fname" style="color:red"></span>
+							</div>
+							
+						</div>
+						
+						<div class="row">
+							<div class="col-25">
+								<label for="lname">Last Name</label>
+							</div>
+							<div class="col-75">
+								<input type="text" name="lastname" placeholder="Your last name.." autocomplete="off"
+								onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"  maxlength="30">
+								<span id="lname" style="color:red"></span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="subject">Gender</label>
+							</div>
+							<div class="col-75">
+								<input type="radio"  id="gen" name="gender" value="Male">
+								<label for="html">Male</label>
+								<input type="radio"  id="gen" name="gender" value="Female">
+								<label for="html">Female</label>
+								<span id="gender" style="color:red"></span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="subject">Comment</label>
+							</div>
+							<div class="col-75">
+								<textarea  name="comment" placeholder="Write something.." style="height:200px" autocomplete="off"></textarea>
+								<span id="comment" style="color:red"></span>
+								<br><br>
+								<input type="submit" value="Submit">
+								<div class="col-75">
+									<input type="reset" value="Reset">
+								</div>
+							</div>
+						</div>
+    
+				</form>
+
+			</td>
+			<td>
+				
+					<div id="div1" class="row">
+						
+							<p id="fname1" style="text-align:center;">Name :</p>
+							<hr>
+							<span style="color:black">Comment 1 :</span><span id="comment1"> </span>
+						
+					</div>
+					<div id="div1" class="row">
+						
+							<p id="fname2" style="text-align:center;">Name :</p>
+							<hr>
+							<span style="color:black">Comment 2 :</span>
+							<span id="comment2"> </span>
+						
+					</div>
+					<div id="div1" class="row">
+						
+							<p id="fname3" style="text-align:center;"> Name :</p>
+							<hr>
+						<span style="color:black">Comment 3 :</span>
+							<span id="comment3"></span>
+						
+					</div>
+					<div id="div1" class="row">
+						
+							<p id="fname4" style="text-align:center;">Name :</p>
+							<hr>
+							<span style="color:black">Comment 4 :</span>
+							<span id="comment4"></span>
+						
+					</div>
+					<div id="div1" class="row">
+						
+							<p id="fname5" style="text-align:center;">Name :</p>
+							<hr>
+							<span style="color:black">Comment 5 :</span>
+							<span id="comment5"></span>
+						
+					</div>
+					
+    
+			
+			</td>
+			
+		</tr>
+  
+	</table>
+</div>
+
+<style>
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  width:100px;
+  margin-left:10;
+  text-align:left;
+  font-weight:bold;
+}
+.label {
+	width: 200px;
+	padding: 12px;
+	resize: vertical;
+	
+	 word-break: break-all; /* will break at end of line*/ 
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 12px;
+  float:left;
+}
+/*style the Reset button*/
+input[type=reset] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 12px;
+  float:left;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 10%;
+  margin-top: 6px;
+}
+
+.col-25-r {
+  float: left;
+  width: 10%;
+  margin-top: 6px;
+  margin-left:50px;
+}
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: right;
+  width: 70%;
+  margin-top: 6px;
+}
+.col-75-r {
+  float: left;
+  width: 30%;
+  margin-top: 6px;
+  margin-left: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+   input[type=submit] {
+    width: 50%;
+   margin-left:90px;
+	
+  }
+}
+table {
+  width: 100%;
+}
+
+p,hr{
+	margin-top:-15px;
+	resize: vertical;
+	
+	 word-break: break-all;
+}
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid blue;
+    margin: 1em 0; padding: 0; 
+	}
+span{
+resize: vertical;
+	
+	 word-break: break-all;
+	 }
+	 #div1 {
+  width: 320px;
+  padding: 10px;
+  margin-left:200px;
+  margin-top:10px;
+  background-color:rgb(247, 180, 57);
+  color:white;
+  padding:20px;
+  
+}
+</style>
+<script>  
+	var count=0;
+	function validateform(){  
+	
+	var title =document.myform.title.value;  
+	var fname=document.myform.firstname.value;  
+	var lname=document.myform.lastname.value;  
+	var gender=document.myform.gender.value;  
+	var comment=document.myform.comment.value; 
+
+		
+		if(title==""){
+			document.getElementById("title").innerHTML="**Please Select title";
+			return false;
+		}
+		if(title!=""){
+			document.getElementById("title").innerHTML=""; 
+		}
+		if(fname==""){
+			document.getElementById("fname").innerHTML="**Please enter value";
+			return false;
+		}
+		if(fname!=""){
+			document.getElementById("fname").innerHTML=""; 
+		}
+		if(lname ==""){
+			document.getElementById("lname").innerHTML="**Please enter value";
+			return false;
+		}
+		if(lname!=""){
+			document.getElementById("lname").innerHTML="";
+			//return false;
+		}
+		if(gender==""){
+			document.getElementById("gender").innerHTML="**Please Select  gender";
+			return false;
+		}
+		if(gender!=""){
+			document.getElementById("gender").innerHTML="";
+			//return false;
+		}
+		if(comment==""){
+			document.getElementById("comment").innerHTML="**Please enter value";
+			return false;
+		}
+		if(comment!=""){
+			document.getElementById("comment").innerHTML="";
+			//return false;
+		}
+	
+	
+		if (title !="" && fname!="" && lname!="" && gender !="" && comment !=""){
+	
+			count++
+			if(count==1){
+				document.getElementById("fname1").innerHTML=title+" "+fname+lname+" "+gender;  
+				document.getElementById("comment1").innerHTML=" "+comment;
+			
+				document.getElementById("title").innerHTML="";  
+				document.getElementById("fname").innerHTML="";
+				document.getElementById("lname").innerHTML="";
+				document.getElementById("gender").innerHTML="";
+				document.getElementById("comment").innerHTML="";
+				
+				document.myform.title.value="";  
+				document.myform.firstname.value="";  
+				document.myform.lastname.value="";  
+				document.getElementById("gen").checked =false; 
+				document.myform.comment.value=""; 
+				return false; 
+			}
+			if(count==2){
+				//fname 2
+				document.getElementById("fname2").innerHTML=title+" "+fname+lname+" " +gender;  ;  
+				document.getElementById("comment2").innerHTML=" "+comment;
+			
+				document.getElementById("title").innerHTML="";  
+				document.getElementById("fname").innerHTML="";
+				document.getElementById("lname").innerHTML="";
+				document.getElementById("gender").innerHTML="";
+				document.getElementById("comment").innerHTML="";
+				
+				document.myform.title.value="";  
+				document.myform.firstname.value="";  
+				document.myform.lastname.value="";  
+				document.getElementById("gen").checked =false; 
+				document.myform.comment.value="";
+				return false; 
+			}
+			if(count==3){
+				document.getElementById("fname3").innerHTML=title+" "+fname+lname+" " +gender; 
+				document.getElementById("comment3").innerHTML=" "+comment;
+			
+				document.getElementById("title").innerHTML="";  
+				document.getElementById("fname").innerHTML="";
+				document.getElementById("lname").innerHTML="";
+				document.getElementById("gender").innerHTML="";
+				document.getElementById("comment").innerHTML="";
+				
+				document.myform.title.value="";  
+				document.myform.firstname.value="";  
+				document.myform.lastname.value="";  
+				document.getElementById("gen").checked =false; 
+				document.myform.comment.value="";
+				
+				return false; 
+			}
+			if(count==4){
+				document.getElementById("fname4").innerHTML=title+" "+fname+lname+" " +gender;
+				document.getElementById("comment4").innerHTML=" "+comment;
+			
+				document.getElementById("title").innerHTML="";  
+				document.getElementById("fname").innerHTML="";
+				document.getElementById("lname").innerHTML="";
+				document.getElementById("gender").innerHTML="";
+				document.getElementById("comment").innerHTML="";
+				
+				document.myform.title.value="";  
+				document.myform.firstname.value="";  
+				document.myform.lastname.value="";  
+				document.getElementById("gen").checked =false; 
+				document.myform.comment.value="";
+				
+				return false; 
+			}
+			if(count==5){
+				document.getElementById("fname5").innerHTML=title+" "+fname+lname+" "+gender;  
+				document.getElementById("comment5").innerHTML=" "+comment;
+			
+				document.getElementById("title").innerHTML="";  
+				document.getElementById("fname").innerHTML="";
+				document.getElementById("lname").innerHTML="";
+				document.getElementById("gender").innerHTML="";
+				document.getElementById("comment").innerHTML="";
+				
+				document.myform.title.value="";  
+				document.myform.firstname.value="";  
+				document.myform.lastname.value="";  
+				document.getElementById("gen").checked =false;  
+				document.myform.comment.value="";
+				return false; 
+			}
+			
+		} 	
+
+}  
+</script> 
